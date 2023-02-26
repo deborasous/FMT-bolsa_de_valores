@@ -1,4 +1,4 @@
-export class Negociation {
+export class Negotiation {
   #date;
   #numberOfShare;
   #price;
