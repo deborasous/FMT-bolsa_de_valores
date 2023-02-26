@@ -1,3 +1,5 @@
+import { Negotiation } from "./models/negotiation.js";
+
 export class NegotiationController {
   #fieldDate;
   #fieldNumberShare;
@@ -16,5 +18,8 @@ export class NegotiationController {
     let numberShare = this.#fieldNumberShare.value;
     let price = this.#fieldPrice.value;
 
+    let negotiation = new Negotiation(date, numberShare, price);
+
+    console.log(negotiation);
   }
 }
