@@ -7,8 +7,27 @@
     <title>Bolsa de valores</title>
   </head>
   <body>
-    <header>Cabeçalho</header>
-    <main>Corpo</main>
+    <main>
+      <form onsubmit="event.preventDefault()">
+        <label for="date">Data da Negociação</label>
+        <input type="date" id="date" />
+
+        <label for="soldAmount">Qtd de Ações</label>
+        <input type="number" id="soldAmount" min="1" max="100" />
+
+        <label for="valueShare">Preço de Venda</label>
+        <input
+          type="number"
+          id="valueShare"
+          min="0"
+          max="1000000"
+          pattern="[0-9]+([\.][0-9]+)?"
+          step=".1"
+        />
+
+        <button type="submit" onclick="vender()">Vender</button>
+      </form>
+    </main>
 
     <script src="./index.js"></script>
   </body>
