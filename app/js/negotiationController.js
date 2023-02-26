@@ -1,9 +1,11 @@
 import { Negotiation } from "./models/negotiation.js";
+import { NegotiatiosList } from "./models/negotiationList.js";
 
 export class NegotiationController {
   #fieldDate;
   #fieldNumberShare;
   #fieldPrice;
+  #negotiationList = new NegotiatiosList();
 
   constructor() {
     this.#fieldDate = document.getElementById("date");
@@ -19,6 +21,7 @@ export class NegotiationController {
     let price = this.#fieldPrice.value;
 
     let negotiation = new Negotiation(date, numberShare, price);
+    this.#negotiationList.addNegotiation(negotiation);
 
     console.log(negotiation);
   }
