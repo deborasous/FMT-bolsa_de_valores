@@ -9,6 +9,9 @@
   <body>
     <main>
       <form onsubmit="event.preventDefault()" id="form">
+       <label for="code">Código</label>
+        <input type="text" id="code" />
+
         <label for="date">Data da Negociação</label>
         <input type="date" id="date" />
 
@@ -27,6 +30,23 @@
 
         <button type="submit">Vender</button>
       </form>
+
+      <table>
+        <thead>
+          <th>Código</th>
+          <th>Data da negociação</th>
+          <th>Qts de Ações</th>
+          <th>Preço de Venda</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>MGLU3</td>
+            <td>15/02/2023</td>
+            <td>20</td>
+            <td>3.5</td>
+          </tr>
+        </tbody>
+      </table>
     </main>
 
     <script type="module" src="./js/index.js"></script>

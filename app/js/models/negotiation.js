@@ -1,9 +1,11 @@
 export class Negotiation {
+  #code;
   #date;
   #numberOfShare;
   #price;
 
-  constructor(dates, numberShares, prices) {
+  constructor(codes, dates, numberShares, prices) {
+    this.#code = codes;
     this.#date = dates;
     this.#numberOfShare = numberShares;
     this.#price = prices;
@@ -19,5 +21,9 @@ export class Negotiation {
 
   get prices() {
     return this.#price;
+  }
+
+  get codes() {
+    return this.#code;
   }
 }
