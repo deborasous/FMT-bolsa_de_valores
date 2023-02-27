@@ -1,8 +1,7 @@
 export class NegotiatiosList {
-  #negottiations = [];
+  #negotiations = [];
 
   addNegotiation(newNegotiation) {
-    this.#negottiations.push(newNegotiation);
+    this.#negotiations.push(newNegotiation);
   }
-
 }
