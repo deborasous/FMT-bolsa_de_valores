@@ -1,14 +1,16 @@
-export class Negotiation {
+export class Trade {
   #code;
   #date;
   #numberOfShare;
   #price;
+  #total;
 
-  constructor(codes, dates, numberShares, prices) {
+  constructor(codes, dates, numberShares, prices, total) {
     this.#code = codes;
     this.#date = dates;
     this.#numberOfShare = numberShares;
     this.#price = prices;
+    this.#total = total;
   }
 
   get dates() {
@@ -25,5 +27,9 @@ export class Negotiation {
 
   get codes() {
     return this.#code;
+  }
+
+  get total() {
+    return this.#total;
   }
 }

@@ -1,8 +1,6 @@
-import { NegotiationController } from "./negotiationController.js";
+import { TradeController } from "./tradeController.js";
 
-const controller = new NegotiationController();
+const controller = new TradeController();
 document.getElementById("form").addEventListener("submit", () => {
-  
-
-  controller.createNegotiation();
+  controller.createTrade();
 });

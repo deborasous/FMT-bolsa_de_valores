@@ -10,13 +10,13 @@
     <main>
       <form onsubmit="event.preventDefault()" id="form">
         <label for="code">Código</label>
-        <input type="text" id="code" />
+        <input type="text" id="code" required />
 
         <label for="date">Data da Negociação</label>
         <input type="date" id="date" />
 
         <label for="soldAmount">Qtd de Ações</label>
-        <input type="number" id="soldAmount" min="1" max="100" />
+        <input type="number" id="soldAmount" min="1" max="100" required />
 
         <label for="priceShare">Preço de Venda</label>
         <input
@@ -26,9 +26,21 @@
           max="1000000"
           pattern="[0-9]+([\.][0-9]+)?"
           step=".1"
+          required
         />
 
         <button type="submit">Vender</button>
+
+        <label for="filter">Filtrar valores</label>
+        <input
+          type="number"
+          id="filter"
+          min="0"
+          max="1000000"
+          pattern="[0-9]+([\.][0-9]+)?"
+          step=".1"
+        />
+        <button type="submit" id="btnFilter">Filtrar</button>
       </form>
 
       <table>
@@ -37,6 +49,7 @@
           <th>Data da negociação</th>
           <th>Qts de Ações</th>
           <th>Preço de Venda</th>
+          <th>Total</th>
         </thead>
         <tbody id="tbody"></tbody>
       </table>
